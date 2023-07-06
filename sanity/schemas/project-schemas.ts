@@ -9,25 +9,41 @@ const project = {
       type: "string",
     },
     {
+      name: "plateforme",
+      title: "Plateforme",
+      type: "string",
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: { source: "name" },
     },
     {
-      name: "image",
+      name: "images",
       title: "Image",
-      type: "image",
-      options: {
-        hostpot: true,
-      },
-      field: [
+      type: "array",
+      of: [
         {
-          name: "alt",
-          title: "Alt",
-          type: "string",
+          name: "images",
+          type: "image",
+          title: "Image",
+          options: {
+            hostpot: true,
+          },
+
+          field: [
+            {
+              name: "alt",
+              title: "Alt",
+              type: "string",
+            },
+          ],
         },
       ],
+      options: {
+        layout: "grid",
+      },
     },
     {
       name: "url",

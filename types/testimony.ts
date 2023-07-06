@@ -1,11 +1,13 @@
 import { PortableTextBlock } from "sanity";
 
-export type project = {
+export type Testimony = {
   _id: string;
   _createdAt: Date;
-  name: string;
+  autheur: string;
+  poste: string;
   slug: string;
-  image: string[];
+  image: string;
+  rate: Number;
   plateforme: string;
   url: string;
   content: PortableTextBlock[];

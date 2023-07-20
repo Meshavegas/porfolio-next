@@ -1,26 +1,21 @@
-const Testimony = {
-  name: "temoignange",
-  title: "Temoignage",
+const Service = {
+  name: "service",
+  title: "Service",
   type: "document",
   fields: [
     {
-      name: "autheur",
-      title: "Autheur",
-      type: "string",
-    },
-    {
-      name: "poste",
-      title: "Poste",
+      name: "name",
+      title: "name",
       type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "autheur" },
+      options: { source: "name" },
     },
     {
-      name: "images",
+      name: "image",
       type: "image",
       title: "Image",
       options: {
@@ -36,16 +31,6 @@ const Testimony = {
       ],
     },
     {
-      name: "url",
-      title: "URL",
-      type: "url",
-    },
-    {
-      name: "rate",
-      title: "Rate",
-      type: "number",
-    },
-    {
       name: "content",
       title: "Content",
       type: "array",
@@ -53,4 +38,4 @@ const Testimony = {
     },
   ],
 };
-export default Testimony;
+export default Service;

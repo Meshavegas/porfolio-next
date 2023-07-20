@@ -10,31 +10,10 @@ export default async function Project({ params }: Props) {
   const slug = params.project;
   const project = await getProject(slug);
   return (
-    <div className="max-w-3xl mx-auto py-20">
-      <header className="flex items-center justify-between">
-        <div className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">
-          {project.name}
-        </div>
-        <a
-          href={project.url}
-          title="View Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap cursor-auto hover:bg-pink-400 hover:text-pink-100 transition"
-        >
-          View Project
-        </a>
-      </header>
-      <div className="text-3xl text-gray-700 mt-5">
-        <PortableText value={project.content} />
+    <div className="">
+      <div className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">
+        {project.name}
       </div>
-      <Image
-        src={project.image}
-        alt={project.name}
-        width={1920}
-        height={1080}
-        className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
-      />
     </div>
   );
 }

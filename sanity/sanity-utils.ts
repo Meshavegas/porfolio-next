@@ -1,6 +1,9 @@
 import { project } from "@/types/project";
 import { createClient, groq } from "next-sanity";
 import config from "./config/client-config";
+import { Hero } from "@/types/hero";
+import { Service } from "@/types/service";
+import { Testimony } from "@/types/testimony";
 
 export async function getProjects(): Promise<project[]> {
   return createClient(config).fetch(
@@ -16,6 +19,17 @@ export async function getProjects(): Promise<project[]> {
   );
 }
 
+export async function getHero(): Promise<Hero> {
+  return createClient(config).fetch(
+    groq`*[_type == "heros"][0]{
+      _id,
+      _createAt,
+      name,
+      "slug":slug.current,
+      "image":images.asset->url,
+    }`
+  );
+}
 export async function getProject(slug: string): Promise<project> {
   return createClient(config).fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
@@ -28,5 +42,33 @@ export async function getProject(slug: string): Promise<project> {
                      content
               }`,
     { slug: slug }
+  );
+}
+
+export async function getServices(): Promise<Service[]> {
+  return createClient(config).fetch(
+    groq`*[_type == "service"]{
+                     _id,
+                     _createdAt,
+                     name,
+                     "slug":slug.current,
+                     "image":image.asset->url,
+                     content
+              }`
+  );
+}
+export async function getTestimony(): Promise<Testimony[]> {
+  return createClient(config).fetch(
+    groq`*[_type == "temoignange"]{
+                     _id,
+                     _createdAt,
+                     autheur,
+                     poste,
+                     url,
+                     rate,
+                     "slug":slug.current,
+                     "image":images.asset->url,
+                     content
+              }`
   );
 }

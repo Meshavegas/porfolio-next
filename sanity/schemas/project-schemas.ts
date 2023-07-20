@@ -25,7 +25,7 @@ const project = {
       type: "array",
       of: [
         {
-          name: "images",
+          name: "image",
           type: "image",
           title: "Image",
           options: {

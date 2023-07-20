@@ -16,15 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  mx-auto`}>
-        <header>
-          <Link
-            href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-2xl drop-shadow font-extrabold"
-          >
-            mesha vegas
-          </Link>
-        </header>
+      <body className={`${inter.className}  `}>
         <main>{children}</main>
       </body>
     </html>

@@ -12,7 +12,7 @@ export const Service = async () => {
       <Title title="Services" isCenter="center" />
       <p className="text-2xl text-black text-justify">
         Notre agence offre des services de développement web et mobile complets.
-        Avec une expertise dans la création de sites et d'applications
+        Avec une expertise dans la création de sites et d&apos;applications
         interactifs, nous mettons l&apos;accent sur les interfaces utilisateur
         conviviales et l&apos;expérience utilisateur. Nous gérons également le
         développement backend, l&apos;intégration d&apos;API, la sécurité des

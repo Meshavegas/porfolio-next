@@ -21,10 +21,11 @@ export const Process = () => {
           </div>
           <p className="text-3xl font-semibold">Évaluation des besoins</p>
           <div className="text-2xl text-justify">
-            Le premier pas est d\'évaluer les besoins du client. Cela implique
-            de comprendre les objectifs du client, ses exigences et ses
+            Le premier pas est d&apos;évaluer les besoins du client. Cela
+            implique de comprendre les objectifs du client, ses exigences et ses
             contraintes. Une fois que les besoins du client sont bien compris,
-            l\'agence peut commencer à développer une solution personnalisée.
+            l&apos;agence peut commencer à développer une solution
+            personnalisée.
           </div>
         </div>
         <div className="flex flex-col border border-base rounded-xl p-3 justify-center items-center">

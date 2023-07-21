@@ -7,10 +7,13 @@ import { MdOutlineClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 export const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Services", to: "/#services" },
-  { name: "Partenaires", to: "/#partenaires" },
-  { name: "Contacts", to: "/#contact" },
-  { name: "Réalisations", to: "/realisations" },
+  { name: "Services", to: "#services" },
+  { name: "Partenaires", to: "#partenaires" },
+  { name: "About Me", to: "#apropos" },
+  { name: "Flow", to: "#flow" },
+  { name: "Temoignage", to: "#testimony" },
+  { name: "PortFolio", to: "#portfolio" },
+  { name: "Talk Me", to: "#task" },
 ];
 
 export const NavBar = () => {
@@ -42,7 +45,7 @@ export const NavBar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center   text-white text-xl bg-light p-3 rounded-full hover:bg-base  focus:outline-none justify-center align-middle">
+          <div className="flex items-center   text-white text-xl bg-light p-3 rounded-full hover:bg-base hover:border-2 hover:border-light focus:outline-none justify-center align-middle">
             <a
               href="https://wa.me/237677899380?text=Bonjour+*max+Design*+depuis+votre+site"
               className="flex items-center"

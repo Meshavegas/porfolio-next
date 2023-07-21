@@ -13,12 +13,15 @@ export const Testimony = async () => {
     inactiveFillColor: "#fbf1a9",
   };
   return (
-    <div className="px-4 md:px-20 py-20 bg-testimony-image bg-cover">
+    <div
+      className="px-4 md:px-20 py-20 md:py-40 bg-testimony-image bg-cover"
+      id="testimony"
+    >
       <Title title="Testimony" isCenter="center" />
       <div className="text-4xl text-black font-extrabold text-center capitalize">
         what people say's about us
       </div>
-      <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 xl:grid-cols-4 md:grid-cols-2">
+      <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 xl:grid-cols-4 md:grid-cols-2 items-center align-middle">
         {testimony.map((value) => (
           <div className="rounded-xl shadow-lg p-6 bg-white">
             <div className="rating">

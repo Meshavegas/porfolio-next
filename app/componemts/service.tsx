@@ -8,7 +8,7 @@ export const Service = async () => {
   const services = await getServices();
 
   return (
-    <div className="h-1/2 my-20 md:mx-20 mx-4">
+    <div className="h-1/2 my-20 md:mx-40 mx-4" id="services">
       <Title title="Services" isCenter="center" />
       <p className="text-2xl text-black text-justify">
         Notre agence offre des services de développement web et mobile complets.

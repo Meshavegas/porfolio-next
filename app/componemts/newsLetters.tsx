@@ -5,21 +5,21 @@ export const NewsLetter = async () => {
   // const services = await getServices();
 
   return (
-    <div className="md:px-20 px-4 flex md:flow-row flex-col bg-gray pt-20 pb-20">
-      <div className=" mx-10">
+    <div className="md:px-20 px-4 flex md:flex-row flex-col bg-gray pt-20 pb-20 gap-3">
+      <div className="w-full md:w-3/4">
         <Title title="Subcribbe" isCenter="true" />
         <SubTitle
-          paragraphe="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          molestias eligendi ut? Nisi, ad. Aliquid accusantium laudantium
-          consequatur nisi amet?"
+          paragraphe="Nous vous enverrons régulièrement des articles sur les dernières
+          tendances en développement web, des conseils pour améliorer votre site
+          web ou votre application mobile, des offres spéciales sur nos services
+          et des interviews de développeurs web."
           isCenter="left"
         />
       </div>
-      <div className="flex flex-col mx-10">
+      <div className="flex flex-col">
         <div className="text-2xl font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          reiciendis quam quo est. Dignissimos beatae tempora fuga modi labore
-          hic.
+          Inscrivez-vous à notre newsletter pour recevoir des conseils et des
+          offres exclusives sur le développement web !
         </div>
         <div className="input">
           <form action="#">

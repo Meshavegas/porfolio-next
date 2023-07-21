@@ -12,22 +12,26 @@ export async function getProjects(): Promise<project[]> {
                      _createdAt,
                      name,
                      "slug":slug.current,
-                     "image":image.asset->url,
+                     "image":images[]{
+                     asset->{url,}, alt
+                     },
                      url,
-                     content
+                     content, 
+                     techno
               }`
   );
 }
 
-export async function getHero(): Promise<Hero> {
+export async function getIllustration(slug: string): Promise<Hero> {
   return createClient(config).fetch(
-    groq`*[_type == "heros"][0]{
+    groq`*[_type == "heros" && slug.current ==$slug ][0]{
       _id,
       _createAt,
       name,
       "slug":slug.current,
       "image":images.asset->url,
-    }`
+    }`,
+    { slug: slug }
   );
 }
 export async function getProject(slug: string): Promise<project> {

@@ -27,6 +27,7 @@ module.exports = {
         "hero-image": 'url("/hero.png")',
         "story-image": 'url("/story.jpg")',
         "testimony-image": 'url("/testimony.jpg")',
+        "happy-image": 'url("/baniereH.png")',
       },
     },
   },

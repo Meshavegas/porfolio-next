@@ -56,6 +56,16 @@ const project = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "techno",
+      title: "Technologies",
+      type: "array",
+      of: [
+        {
+          type: "string",
+        },
+      ],
+    },
   ],
 };
 

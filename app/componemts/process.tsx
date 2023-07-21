@@ -2,13 +2,13 @@ import React from "react";
 import { BsGearWide } from "react-icons/bs";
 import { GrDeploy } from "react-icons/gr";
 import { SiAzuredataexplorer } from "react-icons/si";
-import { Title } from "./small/title";
+import Title from "./small/title";
 import { MdOutlineDeviceHub } from "react-icons/md";
 
 export const Process = () => {
   return (
     <div className="mx-4 py-20 md:px-20 md:py-40" id="flow">
-      <Title title="Process" isCenter="center" />
+      <Title title="Process" align="center" />
       <h1 className="text-4xl font-extrabold text-center">
         Mon proccesus de traivail
       </h1>

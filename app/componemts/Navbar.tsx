@@ -7,19 +7,22 @@ import { MdOutlineClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 export const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Services", to: "#services" },
-  { name: "Partenaires", to: "#partenaires" },
-  { name: "About Me", to: "#apropos" },
-  { name: "Flow", to: "#flow" },
-  { name: "Temoignage", to: "#testimony" },
-  { name: "PortFolio", to: "#portfolio" },
-  { name: "Talk Me", to: "#task" },
+  { name: "Services", to: "/#services" },
+  { name: "Partenaires", to: "/#partenaires" },
+  { name: "About Me", to: "/#apropos" },
+  { name: "Flow", to: "/#flow" },
+  { name: "Temoignage", to: "/#testimony" },
+  { name: "PortFolio", to: "/#portfolio" },
+  { name: "Talk Me", to: "/#task" },
 ];
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {
     setIsOpen((prev) => !prev);
+  };
+  const handleNavigate = () => {
+    setIsOpen(false);
   };
   return (
     <div className={`top-0 w-full  h-[90px] z-40 sticky bg-base`}>
@@ -30,24 +33,28 @@ export const NavBar = () => {
             <Image
               src="/logo4.png"
               alt="logo"
-              width={150}
-              height={70}
-              className=" rounded-sm"
+              width={1080}
+              height={1080}
+              className=" md:w-40 w-20"
             />
           </Link>
         </h1>
-        <nav className="hidden md:flex items-center gap-6 text-white text-bold text-2xl">
+        <nav className="hidden md:flex items-center gap-6 text-white text-bold text-lg ">
           {navLinks.map(({ name, to }) => (
-            <Link key={name + to} href={to} className="text-white">
+            <Link
+              key={name + to}
+              href={to}
+              className="text-white hover:text-light"
+            >
               {name}
             </Link>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center   text-white text-xl bg-light p-3 rounded-full hover:bg-base hover:border-2 hover:border-light focus:outline-none justify-center align-middle">
+          <div className="flex items-center   text-white text-xl bg-light p-3 rounded-full border-light hover:bg-base border-2 hover:border-light focus:outline-none justify-center align-middle">
             <a
-              href="https://wa.me/237677899380?text=Bonjour+*max+Design*+depuis+votre+site"
+              href="https://wa.me/237681415723?text=Bonjour+*Dr.+Vegas*+depuis+votre+site"
               className="flex items-center"
               target="_blank"
             >
@@ -55,7 +62,7 @@ export const NavBar = () => {
               <BsCart3 className="ml-2" />
             </a>
           </div>
-          <div className="rounded"></div>
+          {/* <div className="rounded"></div> */}
         </div>
 
         <div className=" pr-2 md:hidden">
@@ -74,10 +81,10 @@ export const NavBar = () => {
       </div>
       {isOpen && (
         <div className="bg-base p-4 z-40 absolute w-full md:hidden  ">
-          <ul className=" flex flex-col items-start gap-4 text-white">
+          <ul className=" flex flex-col items-start gap-4 text-white text-lg">
             {navLinks.map(({ name, to }) => (
               <Link key={name + to} href={to}>
-                {name}
+                <span onClick={handleNavigate}>{name}</span>
               </Link>
             ))}
           </ul>

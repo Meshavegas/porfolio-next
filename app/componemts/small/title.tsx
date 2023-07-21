@@ -1,13 +1,29 @@
-import React from "react";
-
-type title = {
+interface TitleProps {
   title: string;
-  isCenter: String;
-};
-export const Title = ({ title, isCenter }: title) => {
+  align?: "left" | "center" | "right";
+}
+
+const Title: React.FC<TitleProps> = ({ title, align = "left" }) => {
+  const alignment =
+    align === "center"
+      ? "text-center"
+      : align === "right"
+      ? "text-right"
+      : "text-left";
+
   return (
-    <div className={`text-base text-7xl text-${isCenter} font-extrabold mb-6`}>
+    <h1
+      className={`
+        text-5xl 
+        font-extrabold 
+        mb-6
+        text-green
+        ${alignment}
+      `}
+    >
       {title}
-    </div>
+    </h1>
   );
 };
+
+export default Title;

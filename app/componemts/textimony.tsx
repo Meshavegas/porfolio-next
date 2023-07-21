@@ -3,7 +3,7 @@ import { PortableText } from "@portabletext/react";
 import { Rating, ThinStar } from "@smastrom/react-rating";
 import Image from "next/image";
 import React from "react";
-import { Title } from "./small/title";
+import Title from "./small/title";
 
 export const Testimony = async () => {
   const testimony = await getTestimony();
@@ -17,7 +17,7 @@ export const Testimony = async () => {
       className="px-4 md:px-20 py-20 md:py-40 bg-testimony-image bg-cover"
       id="testimony"
     >
-      <Title title="Testimony" isCenter="center" />
+      <Title title="Testimony" align="center" />
       <div className="text-4xl text-black font-extrabold text-center capitalize">
         what people say&apos;s about us
       </div>

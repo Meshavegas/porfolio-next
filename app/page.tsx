@@ -33,10 +33,10 @@ export default async function Home() {
   const hero = await getIllustration("moi-en-veste");
 
   return (
-    <div className="">
+    <div>
       <NavBar />
       <div className="bg-hero-image bg-center bg-cover ">
-        <div className=" flex lg:flex-row flex-col pt-1 md:pt-20 justify-center items-center">
+        <div className=" flex lg:flex-row flex-col pt-1 md:py-20 justify-center items-center">
           <div className="basis-full md:basis-1/2 md:mt-30 md:mx-20 mt-3 mx-2">
             <h1 className="md:text-5xl font-extrabold text-white flex flex-wrap text-3xl">
               Hello, I&apos;am Mesha vegas An Mobile and Web Developer
@@ -58,7 +58,7 @@ export default async function Home() {
               </div>
             </div>
             <div className=" w-fit mt-2">
-              <div className="bg-light text-3xl px-3 py-4 text-white flex flex-row rounded-2xl justify-center align-middle hover:bg-base hover:text-white cursor-pointer">
+              <div className="bg-light text-3xl border-light px-3 py-4 text-white flex flex-row rounded-2xl justify-center align-middle hover:bg-base hover:border-light border hover:text-white cursor-pointer">
                 Me Contacter{" "}
                 <BsFillArrowRightCircleFill className="ml-4 mt-2" />
               </div>

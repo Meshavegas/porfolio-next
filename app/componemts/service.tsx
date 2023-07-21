@@ -2,14 +2,14 @@ import { getServices } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import React from "react";
-import { Title } from "./small/title";
+import Title from "./small/title";
 
 export const Service = async () => {
   const services = await getServices();
 
   return (
     <div className="h-1/2 my-20 md:mx-40 mx-4" id="services">
-      <Title title="Services" isCenter="center" />
+      <Title title="Services" align="center" />
       <p className="text-2xl text-black text-justify">
         Notre agence offre des services de développement web et mobile complets.
         Avec une expertise dans la création de sites et d&apos;applications
@@ -20,11 +20,11 @@ export const Service = async () => {
         confiance à notre équipe expérimentée pour concrétiser vos idées
         numériques et offrir des solutions sur mesure à vos besoins.
       </p>
-      <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 xl:grid-cols-4 md:grid-cols-2">
+      <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 md:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.slug}
-            className="p-6 group bg-light-grey border flex flex-auto flex-col cursor-pointer border-light rounded-lg shadow hover:bg-base"
+            className="p-6 group bg-light-grey border flex flex-auto flex-col cursor-pointer border-light rounded-lg shadow hover:bg-base max-w-1/3"
           >
             <div className="justify-center flex h-20">
               <div className="bg-white w-20 md:h-10 rounded-full group-hover:bg-light">

@@ -1,5 +1,5 @@
 import { SubTitle } from "./small/subtitle";
-import { Title } from "./small/title";
+import Title from "./small/title";
 
 export const NewsLetter = async () => {
   // const services = await getServices();
@@ -7,7 +7,7 @@ export const NewsLetter = async () => {
   return (
     <div className="md:px-20 px-4 flex md:flex-row flex-col bg-gray pt-20 pb-20 gap-3">
       <div className="w-full md:w-3/4">
-        <Title title="Subcribbe" isCenter="true" />
+        <Title title="Subcribbe" align="center" />
         <SubTitle
           paragraphe="Nous vous enverrons régulièrement des articles sur les dernières
           tendances en développement web, des conseils pour améliorer votre site

@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "./small/title";
+import Title from "./small/title";
 import { getIllustration, getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
@@ -14,7 +14,7 @@ export const Project = async () => {
       id="portfolio"
     >
       <div className="">
-        <Title title="PortFolio" isCenter="center" />
+        <Title title="PortFolio" align="center" />
         <div className="text-3xl text-center">
           Presentoire des project realiser
         </div>
@@ -36,7 +36,7 @@ export const Project = async () => {
           {projects.map((project) => (
             <div
               key={project.slug}
-              className="bg-gray w-full md:w-1/3 flex flex-col justify-between items-center rounded-xl pt-4   mt-4 ml-0 "
+              className="bg-gray w-full md:w-5/12 flex flex-col justify-between items-center rounded-xl pt-4   mt-4 ml-0 "
             >
               <div className="flex justify-center items-center px-3">
                 {project.image && (
@@ -49,13 +49,17 @@ export const Project = async () => {
                   />
                 )}
               </div>
-              <div className="bg-white flex flex-row w-full justify-between items-center px-2 py-1 border-b-2 border-l-2 border-r-2 rounded-b-xl border-base mt-4">
+              <div className="bg-white flex flex-row w-full justify-between items-center px-2 py-1 border-b-2 border-l-2 border-r-2 rounded-b-xl border-base mt-4 flex-wrap md:flex-nowrap">
                 <div className="">
-                  <div className="text-4xl font-extrabold">{project.name}</div>
-                  <p className="text-lg text-light font-extrabold">
+                  <div className="text-4xl font-extrabold break-normal">
+                    {project.name}
+                  </div>
+                  <p className="text-lg text-light font-extrabold break-all">
                     [
                     {project.techno.map((tech) => (
-                      <span key={tech}>{tech},</span>
+                      <span key={tech} className="break-all">
+                        {tech},
+                      </span>
                     ))}
                     ]
                   </p>

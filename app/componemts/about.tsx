@@ -1,6 +1,7 @@
 import React from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
-import { Title } from "./small/title";
+import { AiOutlineDownload } from "react-icons/ai";
+import Title from "./small/title";
 import { getIllustration } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
@@ -23,19 +24,19 @@ export const About = async () => {
         )}
       </div>
       <div className="w-full md:w-1/2 grid grid-cols-1">
-        <Title title="About Me" isCenter="center" />
+        <Title title="About Me" align="center" />
 
         <div className="text-4xl font-bold justify-center">
           Programer un produit, pas juste une application
         </div>
-        <div className="text-black">
+        <div className="text-black text-xl">
           Je suis convaincu que la programmation d&apos;un produit ne consiste
           pas simplement à créer une application qui fonctionne. Il s&apos;agit
           de créer un produit qui est utile, attrayant et durable. Il
           s&apos;agit de créer un produit qui a un impact positif sur le monde.
         </div>
         <div className=" bg-light flex flex-row p-3 rounded-md mt-2 justify-start items-start">
-          <div className="w-30 md:w-36">
+          <div className="w-30 mr-4">
             <BsArrowRightCircle className="text-white" size={30} />
           </div>
           <div className="text-2xl">
@@ -45,10 +46,10 @@ export const About = async () => {
           </div>
         </div>
         <div className=" bg-light flex flex-row p-3 rounded-md mt-2 justify-start items-start">
-          <div className="w-30 md:w-60">
+          <div className="w-30 mr-4">
             <BsArrowRightCircle className="text-white " size={30} />
           </div>
-          <div className="text-2xl ml-4">
+          <div className="text-2xl">
             <h1 className="text-2xl font-extrabold">
               1+ ans expérience dans le développement web et mobile.
             </h1>
@@ -57,8 +58,9 @@ export const About = async () => {
             et j&apos;apprends toujours de nouvelles choses.
           </div>
         </div>
-        <div className="bg-light px-3 py-2 rounded-4xl text-white cursor-pointer  w-fit mt-4 text-3xl md:text-4xl font-extrabold">
-          Telecharger mon CV
+        <div className="bg-light px-3 py-2 rounded-3xl text-white cursor-pointer items-center justify-center  w-fit mt-4 text-3xl md:text-4xl font-extrabold flex flex-row">
+          Telecharger mon CV{" "}
+          <AiOutlineDownload className="text-white ml-4" size={50} />
         </div>
       </div>
     </div>

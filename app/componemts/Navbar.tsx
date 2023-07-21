@@ -1,4 +1,3 @@
-import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -15,10 +14,11 @@ export const navLinks = [
   { name: "PortFolio", to: "/#portfolio" },
   { name: "Talk Me", to: "/#task" },
 ];
-
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {
+    console.log(isOpen, "bolt");
+
     setIsOpen((prev) => !prev);
   };
   const handleNavigate = () => {
@@ -67,15 +67,13 @@ export const NavBar = () => {
 
         <div className=" pr-2 md:hidden">
           {isOpen ? (
-            <MdOutlineClose
-              className="text-white font-bold text-xl w-7"
-              onClick={handleIsOpen}
-            />
+            <div className="" onClick={handleIsOpen}>
+              <MdOutlineClose className="text-white font-bold text-xl w-7" />
+            </div>
           ) : (
-            <FiMenu
-              className="text-white font-bold text-xl w-7"
-              onClick={handleIsOpen}
-            />
+            <div onClick={handleIsOpen} className="">
+              <FiMenu className="text-white font-bold text-xl w-7" />
+            </div>
           )}
         </div>
       </div>
@@ -84,7 +82,8 @@ export const NavBar = () => {
           <ul className=" flex flex-col items-start gap-4 text-white text-lg">
             {navLinks.map(({ name, to }) => (
               <Link key={name + to} href={to}>
-                <span onClick={handleNavigate}>{name}</span>
+                {/* <span onClick={handleNavigate}>{name}</span> */}
+                {name}
               </Link>
             ))}
           </ul>

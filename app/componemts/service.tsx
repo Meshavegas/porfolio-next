@@ -13,12 +13,12 @@ export const Service = async () => {
       <p className="text-2xl text-black text-justify">
         Notre agence offre des services de développement web et mobile complets.
         Avec une expertise dans la création de sites et d'applications
-        interactifs, nous mettons l\'accent sur les interfaces utilisateur
-        conviviales et l\'expérience utilisateur. Nous gérons également le
-        développement backend, l\'intégration d\'API, la sécurité des données,
-        la maintenance et l\'optimisation des performances. Faites confiance à
-        notre équipe expérimentée pour concrétiser vos idées numériques et
-        offrir des solutions sur mesure à vos besoins.
+        interactifs, nous mettons l&apos;accent sur les interfaces utilisateur
+        conviviales et l&apos;expérience utilisateur. Nous gérons également le
+        développement backend, l&apos;intégration d&apos;API, la sécurité des
+        données, la maintenance et l&apos;optimisation des performances. Faites
+        confiance à notre équipe expérimentée pour concrétiser vos idées
+        numériques et offrir des solutions sur mesure à vos besoins.
       </p>
       <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 xl:grid-cols-4 md:grid-cols-2">
         {services.map((service) => (

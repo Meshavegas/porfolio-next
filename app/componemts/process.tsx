@@ -41,8 +41,9 @@ export const Process = () => {
           <div className="text-2xl text-justify">
             La deuxième étape consiste à concevoir et à développer la solution.
             Cela implique de créer une architecture, de choisir les technologies
-            appropriées et de développer le code. L\'agence doit également
-            tester la solution pour s\'assurer qu\'elle fonctionne correctement.
+            appropriées et de développer le code. L&apos;agence doit également
+            tester la solution pour s&apos;assurer qu&apos;elle fonctionne
+            correctement.
           </div>
         </div>
         <div className="flex flex-col border border-base rounded-xl p-3 justify-center items-center">
@@ -58,9 +59,9 @@ export const Process = () => {
           <p className="text-3xl font-semibold">Déploiement et support</p>
           <div className="text-2xl text-justify">
             Une fois que la solution est développée, elle doit être déployée sur
-            un serveur. L\'agence doit également fournir un support au client
-            pour l\'aider à utiliser la solution et à résoudre tout problème
-            potentiel.
+            un serveur. L&apos;agence doit également fournir un support au
+            client pour l&apos;aider à utiliser la solution et à résoudre tout
+            problème potentiel.
           </div>
         </div>
       </div>

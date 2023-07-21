@@ -29,10 +29,10 @@ export const About = async () => {
           Programer un produit, pas juste une application
         </div>
         <div className="text-black">
-          Je suis convaincu que la programmation d\'un produit ne consiste pas
-          simplement à créer une application qui fonctionne. Il s\'agit de créer
-          un produit qui est utile, attrayant et durable. Il s\'agit de créer un
-          produit qui a un impact positif sur le monde.
+          Je suis convaincu que la programmation d&apos;un produit ne consiste
+          pas simplement à créer une application qui fonctionne. Il s&apos;agit
+          de créer un produit qui est utile, attrayant et durable. Il
+          s&apos;agit de créer un produit qui a un impact positif sur le monde.
         </div>
         <div className=" bg-light flex flex-row p-3 rounded-md mt-2 justify-start items-start">
           <div className="w-30 md:w-36">
@@ -40,7 +40,7 @@ export const About = async () => {
           </div>
           <div className="text-2xl">
             <h1 className="text-2xl font-extrabold">6 Projets Terminer</h1>
-            J\'ai participé à plus de 6 projets, en collaboration avec mon
+            J&apos;ai participé à plus de 6 projets, en collaboration avec mon
             équipe et avec le soutien précieux de mes collègues seniors.
           </div>
         </div>
@@ -52,9 +52,9 @@ export const About = async () => {
             <h1 className="text-2xl font-extrabold">
               1+ ans expérience dans le développement web et mobile.
             </h1>
-            Je suis un développeur motivé, avec plus d\'un an d\'expérience. Je
-            suis toujours à la recherche de nouveaux défis et j\'apprends
-            toujours de nouvelles choses.
+            Je suis un développeur motivé, avec plus d&apos;un an
+            d&apos;expérience. Je suis toujours à la recherche de nouveaux défis
+            et j&apos;apprends toujours de nouvelles choses.
           </div>
         </div>
         <div className="bg-light px-3 py-2 rounded-4xl text-white cursor-pointer  w-fit mt-4 text-3xl md:text-4xl font-extrabold">

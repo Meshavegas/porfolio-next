@@ -38,7 +38,7 @@ export const Process = () => {
               />
             </div>
           </div>
-          <p className="text-3xl font-semibold">Conception et développement</p>
+          <p className="text-3xl font-semibold">Design et codage</p>
           <div className="text-2xl text-justify">
             La deuxième étape consiste à concevoir et à développer la solution.
             Cela implique de créer une architecture, de choisir les technologies

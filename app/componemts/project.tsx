@@ -34,7 +34,10 @@ export const Project = async () => {
         <div className="project mt-4 flex md:flex-row md:flex-wrap flex-col gap-4 justify-center">
           {/* 1st card */}
           {projects.map((project) => (
-            <div className="bg-gray w-full md:w-1/3 flex flex-col justify-between items-center rounded-xl pt-4   mt-4 ml-0 ">
+            <div
+              key={project.slug}
+              className="bg-gray w-full md:w-1/3 flex flex-col justify-between items-center rounded-xl pt-4   mt-4 ml-0 "
+            >
               <div className="flex justify-center items-center px-3">
                 {project.image && (
                   <Image
@@ -52,7 +55,7 @@ export const Project = async () => {
                   <p className="text-lg text-light font-extrabold">
                     [
                     {project.techno.map((tech) => (
-                      <span>{tech},</span>
+                      <span key={tech}>{tech},</span>
                     ))}
                     ]
                   </p>

@@ -19,11 +19,11 @@ export const Testimony = async () => {
     >
       <Title title="Testimony" isCenter="center" />
       <div className="text-4xl text-black font-extrabold text-center capitalize">
-        what people say's about us
+        what people say\'s about us
       </div>
       <div className="justify-center auto-rows-fr  mt-20 grid gap-3 grid-cols-1 xl:grid-cols-4 md:grid-cols-2 items-center align-middle">
         {testimony.map((value) => (
-          <div className="rounded-xl shadow-lg p-6 bg-white">
+          <div key={value.slug} className="rounded-xl shadow-lg p-6 bg-white">
             <div className="rating">
               <Rating
                 style={{ maxWidth: 150 }}

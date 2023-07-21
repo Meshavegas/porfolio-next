@@ -21,10 +21,10 @@ export const Process = () => {
           </div>
           <p className="text-3xl font-semibold">Évaluation des besoins</p>
           <div className="text-2xl text-justify">
-            Le premier pas est d'évaluer les besoins du client. Cela implique de
-            comprendre les objectifs du client, ses exigences et ses
+            Le premier pas est d\'évaluer les besoins du client. Cela implique
+            de comprendre les objectifs du client, ses exigences et ses
             contraintes. Une fois que les besoins du client sont bien compris,
-            l'agence peut commencer à développer une solution personnalisée.
+            l\'agence peut commencer à développer une solution personnalisée.
           </div>
         </div>
         <div className="flex flex-col border border-base rounded-xl p-3 justify-center items-center">
@@ -41,8 +41,8 @@ export const Process = () => {
           <div className="text-2xl text-justify">
             La deuxième étape consiste à concevoir et à développer la solution.
             Cela implique de créer une architecture, de choisir les technologies
-            appropriées et de développer le code. L'agence doit également tester
-            la solution pour s'assurer qu'elle fonctionne correctement.
+            appropriées et de développer le code. L\'agence doit également
+            tester la solution pour s\'assurer qu\'elle fonctionne correctement.
           </div>
         </div>
         <div className="flex flex-col border border-base rounded-xl p-3 justify-center items-center">
@@ -58,8 +58,8 @@ export const Process = () => {
           <p className="text-3xl font-semibold">Déploiement et support</p>
           <div className="text-2xl text-justify">
             Une fois que la solution est développée, elle doit être déployée sur
-            un serveur. L'agence doit également fournir un support au client
-            pour l'aider à utiliser la solution et à résoudre tout problème
+            un serveur. L\'agence doit également fournir un support au client
+            pour l\'aider à utiliser la solution et à résoudre tout problème
             potentiel.
           </div>
         </div>

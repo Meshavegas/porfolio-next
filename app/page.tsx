@@ -39,21 +39,21 @@ export default async function Home() {
         <div className=" flex lg:flex-row flex-col pt-1 md:pt-20 justify-center items-center">
           <div className="basis-full md:basis-1/2 md:mt-30 md:mx-20 mt-3 mx-2">
             <h1 className="md:text-5xl font-extrabold text-white flex flex-wrap text-3xl">
-              Hello, I'am Mesha vegas An Mobile and Web Developer
+              Hello, I\'am Mesha vegas An Mobile and Web Developer
             </h1>
             <div className="mt-4 text-2xl text-white text-justify">
               <div className="">
                 Je suis développeur web et mobile indépendant. Je propose mes
                 services de développement web, de conception de sites web et
-                d'applications web. Je suis spécialisé dans le développement de
-                sites web et d'applications web responsives.
+                d\'applications web. Je suis spécialisé dans le développement de
+                sites web et d\'applications web responsives.
               </div>
               <div className="mt-3">
-                &#9; J'ai plus de 1 an d'expérience et je suis passionné par mon
-                métier. Je suis toujours à la recherche de nouvelles
+                &#9; J\'ai plus de 1 an d\'expérience et je suis passionné par
+                mon métier. Je suis toujours à la recherche de nouvelles
                 technologies et de nouvelles façons de créer des sites web et
-                des applications mobile innovants et attrayants. N'hésitez pas à
-                me contacter pour discuter de votre projet.
+                des applications mobile innovants et attrayants. N\'hésitez pas
+                à me contacter pour discuter de votre projet.
               </div>
             </div>
             <div className=" w-fit mt-2">

@@ -13,15 +13,15 @@ export const Happy = async () => {
           Vous avez un projet, parlons-ens
         </div>
         <div className=" text-2xl text-white md:text-justify text-left">
-          Bien sûr, voici un développement possible pour le titre "Vous avez un
-          projet, parlons-en" en un seul paragraphe : Nous sommes une agence de
+          Bien sûr, voici un développement possible pour le titre \"Vous avez un
+          projet, parlons-en\" en un seul paragraphe : Nous sommes une agence de
           développement web et mobile spécialisée dans la création de solutions
-          personnalisées. Nous avons une équipe d'ingénieurs et de développeurs
+          personnalisées. Nous avons une équipe d\'ingénieurs et de développeurs
           expérimentés qui peuvent vous aider à concrétiser votre projet, quel
-          qu'il soit. Nous vous accompagnons tout au long du processus de
-          développement, de l'analyse de vos besoins à la livraison de votre
+          qu\'il soit. Nous vous accompagnons tout au long du processus de
+          développement, de l\'analyse de vos besoins à la livraison de votre
           solution. Nous nous engageons à vous fournir une solution de qualité,
-          à la fois fonctionnelle et esthétique. Contactez-nous dès aujourd'hui
+          à la fois fonctionnelle et esthétique. Contactez-nous dès aujourd\'hui
           pour en savoir plus sur nos services.
         </div>
       </div>

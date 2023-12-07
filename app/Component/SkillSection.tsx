@@ -62,6 +62,18 @@ const SkillSection = () => {
           <li className=" w-20 h-20 bg-primary rounded-lg flex justify-center items-center">
             HTML5
           </li>
+          <li className=" w-20 h-20 bg-primary rounded-lg flex justify-center items-center">
+            HTML5
+          </li>
+          <li className=" w-20 h-20 bg-primary rounded-lg flex justify-center items-center">
+            HTML5
+          </li>
+          <li className=" w-20 h-20 bg-primary rounded-lg flex justify-center items-center">
+            HTML5
+          </li>
+          <li className=" w-20 h-20 bg-primary rounded-lg flex justify-center items-center">
+            HTML5
+          </li>
         </ul>
       </div>
       <div className=" mt-5 bg-white py-3 px-6 rounded-xl shadow">

@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-#hero {
-  clip-path: polygon(99% 0, 99% 100%, 41% 91%, 0 84%, 0 0);
+#heros {
+  clip-path: polygon(99% 0, 99% 100%, 41% 91%, 0 100%, 0 0);
+}
+#abouts {
+  clip-path: polygon(99% 0, 199% 80%, 41% 91%, 0 84%, 0 0);
+}
+
+#skills {
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%, 0 16%);
 }

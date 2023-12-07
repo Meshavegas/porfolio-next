@@ -4,13 +4,13 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className=" h-fit lg:h-[90vh] bg-gradient-to-r from-primary2 via-primary2 to-primary flex flex-col lg:flex-row  justify-center items-center gap-10"
+      className=" h-fit lg:h-[90vh] bg-gradient-to-r from-primary4 via-primary4 to-primary2 flex flex-col lg:flex-row  justify-center items-center gap-10"
     >
       <div className=" lg:w-1/3 w-[90%] mt-10 lg:mt-0">
         <h1 className=" text-4xl font-bold text-white uppercase">
           Work better, faster, Together
         </h1>
-        <p className=" text-xl text-justify mt-10 leading-10 ">
+        <p className=" text-xl text-justify mt-10 leading-10 text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam a
           reiciendis sed deserunt vitae error doloribus omnis neque? Rerum,
           excepturi hic. Fugiat necessitatibus enim consequuntur ad consectetur

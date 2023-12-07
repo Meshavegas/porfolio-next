@@ -13,8 +13,8 @@ const SectionLayout = ({
 }) => {
   return (
     <div
-      className={`${classNames} flex justify-center py-3 md:py-52`}
-      style={{ minHeight: hauteur }}
+      className={`${classNames} flex justify-center py-3 md:py-52 max-h-[${hauteur}]`}
+      // style={{ maxHeight: hauteur }}
       id={sectionId}
     >
       <div className={`w-[90%] md:w-[70%] `}>{children}</div>

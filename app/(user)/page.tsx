@@ -5,6 +5,8 @@ import AboutMe from "../Component/AboutMe";
 import SkillSection from "../Component/SkillSection";
 import ProjectsScetion from "../Component/ProjectsScetion";
 import Statistique from "../Component/Statistique";
+import Testimony from "../Component/Testimony";
+import BlogSection from "../Component/BlogSection";
 
 export default function Home() {
   return (
@@ -20,6 +22,16 @@ export default function Home() {
         <ProjectsScetion />
       </SectionLayout>
       <Statistique />
+      <SectionLayout
+        classNames=" bg-white2"
+        sectionId="testimony"
+        hauteur="90vh"
+      >
+        <Testimony />
+      </SectionLayout>
+      <SectionLayout classNames="bg-light-100" sectionId="blog" hauteur="90vh">
+        <BlogSection />
+      </SectionLayout>
     </main>
   );
 }

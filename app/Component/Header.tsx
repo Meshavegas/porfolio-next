@@ -89,7 +89,7 @@ const Header = () => {
                 key={name + to}
                 href={to}
                 onClick={() => setIsOpen(false)}
-                className="text-primary hover:text-orange text-center"
+                className="text-primary hover:text-orange text-center "
               >
                 {name}
               </Link>

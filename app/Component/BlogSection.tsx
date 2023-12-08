@@ -13,7 +13,10 @@ const BlogSection = () => {
       </div>
       <div className=" flex justify-between flex-wrap mt-5 ">
         {blogs.map((blog, key) => (
-          <div className=" w-[32%] mt-5 rounded-xl overflow-hidden shadow-lg">
+          <div
+            className=" w-full md:w-[32%] mt-5 rounded-xl overflow-hidden shadow-lg"
+            key={key}
+          >
             <Image
               src={blog.imageUrl}
               alt={blog.imageUrl}
@@ -24,7 +27,7 @@ const BlogSection = () => {
             <div className="bg-white px-4 py-4">
               <div className=" flex justify-between text-sm">
                 <p className=" flex items-center justify-between">
-                  {blog.thematique}
+                  {blog.thematique.substring(0, 15)}
                 </p>
                 <p className=" flex items-center justify-between">
                   <CiCalendarDate className=" text-primary mr-2" />

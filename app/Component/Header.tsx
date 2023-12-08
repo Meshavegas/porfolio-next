@@ -32,9 +32,9 @@ const Header = () => {
             <Image
               src="/logo.png"
               alt="logo"
-              width={1080}
-              height={1080}
-              className=" h-[80px] md:h-[60px] w-[100px]"
+              width={100}
+              height={180}
+              className=" aspect-video"
             />
             <h1 className=" text-xl md:text-4xl font-bold text-primary">
               Dr. Vegas

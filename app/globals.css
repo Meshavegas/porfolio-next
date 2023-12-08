@@ -7,8 +7,25 @@
 }
 #abouts {
   clip-path: polygon(99% 0, 199% 80%, 41% 91%, 0 84%, 0 0);
+  color: #f7f7f7e1;
 }
 
 #skills {
   clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%, 0 16%);
+}
+
+.animation-pulse {
+  /*box-shadow: 0 0 0 20px rgba(229,62,62, 0.5);
+  transform: scale(0.8);*/
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    /* transform: scale(0.8); */
+    box-shadow: 0 0 0 0 #ffa800;
+  }
+  100% {
+    box-shadow: 0 0 0 30px #ffaa0000;
+  }
 }

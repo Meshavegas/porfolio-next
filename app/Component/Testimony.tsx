@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
+import SingleTestimony from "./SingleTestimony";
 
-import { ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
-
+declare module "framer-motion" {
+  export interface AnimatePresenceProps {
+    children?: React.ReactNode;
+  }
+}
 const Testimony = () => {
   const itemsPerPage = 1;
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -14,37 +18,29 @@ const Testimony = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = testimony.slice(indexOfFirstItem, indexOfLastItem);
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-  return (
-    <div>
-      <div className="">
-        {currentItems.map((it, key) => (
-          <div className=" flex gap-10">
-            <div className=" w-1/4 rounded-xl overflow-hidden">
-              <Image
-                src={it.image}
-                alt={it.name}
-                className=" object-cover aspect-square"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className=" w-1/2 flex  flex-col justify-center">
-              <div className="">
-                <h1 className=" text-2xl">Client Speak</h1>
-                <h1 className=" text-3xl text-primary font-extrabold mt-5">
-                  What some of my Client Say
-                </h1>
-              </div>
-              <p className=" text-left text-2xl leading-10 mt-5">“{it.text}”</p>
-              <h1 className=" text-2xl mt-10">
-                <span className=" text-primary font-bold"> {it.name}</span>{" "}
-                {it.poste}
-              </h1>
-            </div>
-          </div>
-        ))}
 
-        <div className="pagination flex  justify-between w-1/4 mt-5">
+  useEffect(() => {
+    // Démarrez un intervalle pour exécuter paginate toutes les 5000 millisecondes (5 secondes)
+    const intervalId = setInterval(() => {
+      const nextPage = currentPage < testimony.length ? currentPage + 1 : 1;
+      paginate(nextPage);
+      setCurrentPage(nextPage);
+    }, 10000);
+
+    // Nettoyez l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, [currentPage, testimony, paginate]);
+  return (
+    <div className=" py-10">
+      <div className="">
+        <SingleTestimony
+          key={currentPage}
+          it={currentItems[0]}
+          currentPage={currentPage}
+          paginate={paginate}
+        />
+
+        <div className="pagination flex  justify-between md:w-1/4 mt-5">
           {testimony.map((it, index) => (
             <Image
               onClick={() => paginate(index + 1)}
@@ -65,7 +61,7 @@ const Testimony = () => {
 };
 
 export default Testimony;
-const testimony = [
+export const testimony = [
   {
     image: "/infographie.png",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, doloribus! Voluptas laborum quae cupiditate magni fugiat sed enim ipsa officia!",

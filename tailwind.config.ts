@@ -21,11 +21,13 @@ const config: Config = {
       "gray-light": "#838281",
       light: "#ffa800",
       "light-100": "#F7F7F7",
+      "light-200": "#f7f7f7e1",
       white2: "#CEE5F2",
       red: "#d10000",
       whited: "#EDF2F4",
       white: "#FFF",
       black: "#000",
+      transparent: "#00000000",
     },
     extend: {
       backgroundImage: {},

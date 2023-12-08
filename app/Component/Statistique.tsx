@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
@@ -46,10 +47,13 @@ const Statistique = () => {
         <Marquee
           direction="left"
           speed={100}
-          autoFill={true}
           pauseOnHover={true}
+          play={false}
           className=" mb-10 w-[90%] py-2"
         >
+          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
+          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
+          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
           <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
           <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
           <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>

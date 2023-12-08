@@ -17,7 +17,7 @@ const HeroSection = () => {
           minima quibusdam omnis
         </p>
         <button className=" mt-10 bg-secondary rounded-full px-6 py-3 text-white text-xl">
-          Let's Talk!
+          Let&lsquo;s Talk!
         </button>
       </div>
       <div className="lg:w-1/3 w-[90%] mb-32 lg:mb-0 ">

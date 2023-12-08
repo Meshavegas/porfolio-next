@@ -43,7 +43,7 @@ function SingleTestimony({
 }) {
   return (
     <AnimatePresence>
-      <div className=" flex gap-10 flex-wrap" key={key}>
+      <div className=" flex gap-10 flex-wrap items-end" key={key}>
         <div className=" md:hidden text-center">
           <h1 className=" text-2xl">Client Speak</h1>
           <h1 className=" text-3xl text-primary font-extrabold mt-5">
@@ -51,7 +51,7 @@ function SingleTestimony({
           </h1>
         </div>
         <motion.div
-          className=" w-full md:w-1/4 rounded-xl overflow-hidden shadow-xl"
+          className=" w-full md:w-1/4 rounded-xl overflow-hidden shadow-xl h-fit"
           variants={slideVariants}
           initial={"hiddenRight"}
           animate="visible"
@@ -65,7 +65,7 @@ function SingleTestimony({
             height={500}
           />
         </motion.div>
-        <div className=" md:w-[70%] flex  flex-col md:justify-center">
+        <div className=" md:w-[70%] flex  flex-col md:justify-center mb-5">
           <div className=" hidden md:block">
             <h1 className=" text-2xl">Client Speak</h1>
             <h1 className=" text-3xl text-primary font-extrabold mt-5">
@@ -79,7 +79,7 @@ function SingleTestimony({
             animate="visible"
             exit="exit"
           >
-            “ {it.text} ”
+            “{it.text}”
           </motion.p>
           <motion.h1
             className=" text-2xl mt-10"

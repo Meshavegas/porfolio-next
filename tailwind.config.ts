@@ -31,6 +31,9 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {},
+      boxShadow: {
+        image: "0px 2px 8px 0px rgba(99, 99, 99, 0.2)",
+      },
     },
   },
   plugins: [],

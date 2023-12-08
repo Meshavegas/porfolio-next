@@ -13,6 +13,7 @@ import { RiMailSendFill } from "react-icons/ri";
 const navLinks = [
   { name: "About Me", to: "/#about-us" },
   { name: "Project", to: "/#projects" },
+  { name: "Skills", to: "/#skill" },
   { name: "Clients", to: "/#clients" },
   { name: "Blog", to: "/#blog" },
   { name: "Contacts", to: "/#contacts" },
@@ -56,7 +57,7 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center   text-white text-xl bg-light px-6 py-3 rounded-full hover:bg-orange hover:text-white focus:outline-none justify-center align-middle w-full">
             <a
-              href="https://wa.me/237694673624?text=Bonjour+*Impact+co*+Jai+besoin+de+vos+service+impact.com"
+              href="https://wa.me/237694348368?text=Bonjour+*Impact+co*+Jai+besoin+de+vos+service+meshavegas.com"
               className="flex items-center gap-3 group"
               target="_blank"
             >

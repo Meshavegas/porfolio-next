@@ -37,7 +37,7 @@ export const ExperianceCard = () => {
                 ))}
               </div>
             </div>
-            <div className=" flex gap-3 lg:mt-0 mt-10 flex-nowrap w-[25%] justify-end ">
+            <div className=" flex gap-3 lg:mt-0 mt-10 flex-nowrap md:w-[25%] md:justify-end ">
               <span>{ex.startYear}</span>
               <span>-</span>
               <span className=" capitalize">{ex.endYear}</span>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
+import Image from "next/image";
 
 const Statistique = () => {
   return (
@@ -49,7 +50,13 @@ const Statistique = () => {
             <MarqueeGroup>
               {partenaire.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} alt="image" />
+                  <Image
+                    src={el.logo}
+                    alt="image"
+                    height={120}
+                    width={120}
+                    className=" object-contain aspect-video shadow-image"
+                  />
                   {/* <Texte>{el.url}</Texte> */}
                 </ImageGroup>
               ))}
@@ -57,7 +64,13 @@ const Statistique = () => {
             <MarqueeGroup>
               {partenaire.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} alt="image" />
+                  <Image
+                    src={el.logo}
+                    alt="image"
+                    height={120}
+                    width={120}
+                    className=" object-contain aspect-video shadow-image"
+                  />
                   {/* <Texte>{el.url}</Texte> */}
                 </ImageGroup>
               ))}
@@ -73,10 +86,13 @@ export default Statistique;
 
 const partenaire = [
   { logo: "./infographie.png", url: "lien" },
-  { logo: "./infographie.png", url: "lien" },
+  { logo: "./logo.png", url: "lien" },
   { logo: "./infographie.png", url: "lien" },
   { logo: "./logo.png", url: "lien" },
   { logo: "./infographie.png", url: "lien" },
+  { logo: "./logo.png", url: "lien" },
+  { logo: "./infographie.png", url: "lien" },
+  { logo: "./logo.png", url: "lien" },
   { logo: "./infographie.png", url: "lien" },
 ];
 
@@ -109,12 +125,6 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const Text = styled.div`
-  font-size: 35px;
-  font-weight: 500;
-  margin-bottom: 10px;
-`;
-
 const common = css`
   flex-shrink: 0;
   display: flex;
@@ -124,9 +134,6 @@ const common = css`
   width: 100%;
   animation: ${scrollX} 30s linear infinite;
 `;
-const Texte = styled.p`
-  display: none;
-`;
 
 const MarqueeGroup = styled.div`
   ${common}
@@ -134,10 +141,13 @@ const MarqueeGroup = styled.div`
 
 const Marquee = styled.div`
   display: flex;
-  width: 1000px;
+  width: 100%;
   overflow: hidden;
   user-select: none;
 
+  @media (max-width: 768px) {
+    width: 1200px;
+  }
   mask-image: linear-gradient(
     to right,
     hsl(0 0% 0% / 0),
@@ -158,7 +168,7 @@ const ImageGroup = styled.div`
   padding: calc(clamp(10rem, 1rem + 10vmin, 30rem) / 10);
 `;
 
-const Image = styled.img`
+const Images = styled.img`
   object-fit: contain;
 
   border-radius: 0.5rem;

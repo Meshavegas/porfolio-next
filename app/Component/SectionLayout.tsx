@@ -13,7 +13,7 @@ const SectionLayout = ({
 }) => {
   return (
     <div
-      className={`${classNames} flex justify-center py-3 md:py-52 max-h-[${hauteur}]`}
+      className={`${classNames} flex justify-center py-24 md:py-52 max-h-[${hauteur}]`}
       // style={{ maxHeight: hauteur }}
       id={sectionId}
     >

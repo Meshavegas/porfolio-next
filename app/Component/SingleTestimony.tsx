@@ -50,21 +50,38 @@ function SingleTestimony({
             What some of my Client Say
           </h1>
         </div>
-        <motion.div
-          className=" w-full md:w-1/4 rounded-xl overflow-hidden shadow-xl h-fit"
-          variants={slideVariants}
-          initial={"hiddenRight"}
-          animate="visible"
-          exit="exit"
-        >
-          <Image
-            src={it.image}
-            alt={it.name}
-            className=" object-cover aspect-square"
-            width={500}
-            height={500}
-          />
-        </motion.div>
+        <div className="w-full md:w-1/4 mb-5 md:mb-0">
+          <motion.div
+            className="  rounded-xl overflow-hidden shadow-xl h-fit"
+            variants={slideVariants}
+            initial={"hiddenRight"}
+            animate="visible"
+            exit="exit"
+          >
+            <Image
+              src={it.image}
+              alt={it.name}
+              className=" object-cover aspect-square"
+              width={500}
+              height={500}
+            />
+          </motion.div>
+          <div className="pagination flex  justify-between  mt-5 ">
+            {testimony.map((it, index) => (
+              <Image
+                onClick={() => paginate(index + 1)}
+                key={index}
+                src={it.image}
+                alt={it.name}
+                className={` object-cover aspect-square ${
+                  currentPage === index + 1 ? " opacity-100" : " opacity-40"
+                } `}
+                width={50}
+                height={50}
+              />
+            ))}
+          </div>
+        </div>
         <div className=" md:w-[70%] flex  flex-col md:justify-center mb-5">
           <div className=" hidden md:block">
             <h1 className=" text-2xl">Client Speak</h1>

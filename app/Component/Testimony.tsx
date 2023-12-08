@@ -39,22 +39,6 @@ const Testimony = () => {
           currentPage={currentPage}
           paginate={paginate}
         />
-
-        <div className="pagination flex  justify-between md:w-1/4 mt-5">
-          {testimony.map((it, index) => (
-            <Image
-              onClick={() => paginate(index + 1)}
-              key={index}
-              src={it.image}
-              alt={it.name}
-              className={` object-cover aspect-square ${
-                currentPage === index + 1 ? " opacity-100" : " opacity-40"
-              } `}
-              width={50}
-              height={50}
-            />
-          ))}
-        </div>
       </div>
     </div>
   );

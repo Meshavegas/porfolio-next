@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Marquee from "react-fast-marquee";
+import styled, { keyframes, css } from "styled-components";
 
 const Statistique = () => {
   return (
@@ -41,29 +41,128 @@ const Statistique = () => {
           </p>
         </div>
       </div>
-      <hr className=" w-full border-gray opacity-30 my-10" />
+      <hr className=" w-full border-gray opacity-30 my-10 overflow-hidden" />
 
-      <div className="">
-        <Marquee
-          direction="left"
-          speed={100}
-          pauseOnHover={true}
-          play={false}
-          className=" mb-10 w-[90%] py-2"
-        >
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-          <div className=" text-6xl font-extrabold ml-10 bg-primary5">Logo</div>
-        </Marquee>
-      </div>
+      <AppContainer>
+        <Wrapper>
+          <Marquee>
+            <MarqueeGroup>
+              {partenaire.map((el, key) => (
+                <ImageGroup key={key}>
+                  <Image src={el.logo} alt="image" />
+                  {/* <Texte>{el.url}</Texte> */}
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+            <MarqueeGroup>
+              {partenaire.map((el, key) => (
+                <ImageGroup key={key}>
+                  <Image src={el.logo} alt="image" />
+                  {/* <Texte>{el.url}</Texte> */}
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+          </Marquee>
+        </Wrapper>
+      </AppContainer>
     </div>
   );
 };
 
 export default Statistique;
+
+const partenaire = [
+  { logo: "./infographie.png", url: "lien" },
+  { logo: "./infographie.png", url: "lien" },
+  { logo: "./infographie.png", url: "lien" },
+  { logo: "./logo.png", url: "lien" },
+  { logo: "./infographie.png", url: "lien" },
+  { logo: "./infographie.png", url: "lien" },
+];
+
+const scrollX = keyframes`
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+const AppContainer = styled.div`
+  width: 100%;
+  color: #000000;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const Text = styled.div`
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+`;
+
+const common = css`
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  animation: ${scrollX} 30s linear infinite;
+`;
+const Texte = styled.p`
+  display: none;
+`;
+
+const MarqueeGroup = styled.div`
+  ${common}
+`;
+
+const Marquee = styled.div`
+  display: flex;
+  width: 1000px;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+
+  &:hover ${MarqueeGroup} {
+    animation-play-state: paused;
+  }
+`;
+
+const ImageGroup = styled.div`
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 20vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 10vmin, 30rem) / 10);
+`;
+
+const Image = styled.img`
+  object-fit: contain;
+
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+`;

@@ -13,12 +13,10 @@ function OneEducationItem({ key, item }: { item: any; key: number }) {
       exit="exit"
     >
       <h1 className=" text-2xl text-white font-bold">{item.school}</h1>
+      <h2 className=" text-xl text-white2 font-bold">{item.degree}</h2>
       <div className=" text-xl text-white2 font-bold">
-        <span>{item.startYr}</span>
-        <span>-</span>
         <span className=" capitalize">{item.endYr}</span>
       </div>
-      <h2 className=" text-xl text-white2 font-bold">{item.degree}</h2>
     </motion.div>
   );
 }

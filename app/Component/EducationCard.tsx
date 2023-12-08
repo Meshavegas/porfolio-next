@@ -49,38 +49,39 @@ export default EducationCard;
 const education = [
   {
     school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
+
+    endYr: "2023",
+    degree: "Ingénieur Travaux Informatique",
   },
   {
-    school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
+    school: "Institut Africain d'Informatique    ",
+
+    endYr: "2022",
+    degree: "Diplôme de technicien supérieur (DTS),",
   },
   {
-    school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
+    school: "Lycée bilingue de Galim",
+
+    endYr: "2020",
+    degree: "Baccalauréat D",
+  },
+
+  {
+    school: "Lycée bilingue de Galim",
+
+    endYr: "2019",
+    degree: "Probatoire Scientifique D",
   },
   {
-    school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
+    school: "Lycée bilingue de Galim",
+
+    endYr: "2016",
+    degree: "Brevet d'Etude du Premier Cycle",
   },
   {
-    school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
-  },
-  {
-    school: "Institut Africain D'informatique",
-    startYr: "2002",
-    endYr: "present",
-    degree: "Sofware engeener degreer",
+    school: "Certificat d'Etude de Primaire",
+
+    endYr: "2011",
+    degree: "Baccalauréat D",
   },
 ];

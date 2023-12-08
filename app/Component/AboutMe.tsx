@@ -5,8 +5,15 @@ import { FaDownload } from "react-icons/fa";
 import { AboutCard } from "./AboutCard";
 import { EducationCard } from "./EducationCard";
 import { ExperianceCard } from "./ExperienceCard";
+import { saveAs } from "file-saver";
 
 const AboutMe = () => {
+  const saveFile = () => {
+    saveAs(
+      "https://firebasestorage.googleapis.com/v0/b/maniv-a665b.appspot.com/o/LONTCHI_LO%C3%8FC%20STEVE_Resume_02-11-2023-16-35-38.pdf?alt=media&token=bbafd449-aff1-4d37-819a-209943949ad8",
+      "LONTCHI_LOÏC_CV.pdf"
+    );
+  };
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="flex gap-10 lg:flex-row flex-col items-center ">
@@ -26,7 +33,10 @@ const AboutMe = () => {
           className=""
         />
 
-        <button className=" animation-pulse absolute flex gap-5 bg-secondary px-6 py-3 text-xl text-white rounded-full md:bottom-4 bottom-16 capitalize">
+        <button
+          onClick={saveFile}
+          className=" animation-pulse absolute flex gap-5 bg-secondary px-6 py-3 text-xl text-white rounded-full md:bottom-4 bottom-16 capitalize"
+        >
           {" "}
           <FaDownload />
           Download my CV

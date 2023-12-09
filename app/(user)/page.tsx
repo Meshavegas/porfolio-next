@@ -8,8 +8,17 @@ import Statistique from "../Component/Statistique";
 import Testimony from "../Component/Testimony";
 import BlogSection from "../Component/BlogSection";
 import NewsLetter from "../Component/NewsLetter";
+import { groq } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-export default function Home() {
+const query = groq`
+*[_type =='skill']{
+  ...,
+}`;
+
+export default async function Home() {
+  const skill: Skill[] = await client.fetch(query);
+
   return (
     <main>
       <HeroSection />
@@ -21,7 +30,7 @@ export default function Home() {
         <AboutMe />
       </SectionLayout>
       <SectionLayout classNames=" bg-whited" sectionId="skill" hauteur="90vh">
-        <SkillSection />
+        <SkillSection skills={skill} />
       </SectionLayout>
       <SectionLayout
         classNames=" bg-whited"

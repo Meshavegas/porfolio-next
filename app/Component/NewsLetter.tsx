@@ -1,9 +1,23 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowForward } from "react-icons/io";
 
 const NewsLetter = () => {
+  // const form = useForm()
+  const [datas, setDatas] = useState({ email: "", password: "" });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDatas({
+      ...datas,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(datas);
+  };
   return (
     <div className="flex justify-between flex-wrap py-5">
       <div className=" w-full md:w-[30%] flex flex-col items-center">
@@ -36,23 +50,27 @@ const NewsLetter = () => {
         </div>
       </div>
       <div className=" w-full md:w-[65%] flex flex-col mt-5">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className=" flex justify-between">
             <input
               type="text"
               placeholder="Write your name"
               className="bg-transparent text-white border-b w-[45%] focus:outline-none"
+              name="userName"
+              onChange={handleChange}
             />
             <input
               type="email"
               placeholder="Write your Email"
               className="bg-transparent text-white border-b w-[45%] focus:outline-none"
+              name="email"
+              onChange={handleChange}
             />
           </div>
           <textarea
-            name=""
-            id=""
+            name="content"
             className="mt-10 w-full h-64 bg-primary2 focus:bg-light-200 focus:opacity-80 focus:outline-none p-3 rounded opacity-70 "
+            onChange={handleChange}
           ></textarea>
 
           <br />

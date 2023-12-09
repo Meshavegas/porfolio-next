@@ -11,20 +11,34 @@ export const slideVariants = {
     x: "10%",
     opacity: 0,
   },
+  hiddenTop: {
+    y: "-20%",
+    opacity: 0,
+  },
   textHidden: {
     y: "-10%",
     opacity: 0,
   },
   visible: {
     x: "0",
+    y: "0",
     opacity: 1,
     transition: {
       duration: 1,
     },
   },
+  visible2: {
+    x: "0",
+    y: "0",
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
   exit: {
     opacity: 0,
     scale: 0.8,
+    y: "-10%",
     transition: {
       duration: 0.5,
     },

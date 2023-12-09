@@ -6,7 +6,6 @@ import { Wrapper } from "./StyledComponents";
 import { MarqueeGroup } from "./StyledComponents";
 import { Marquee } from "./StyledComponents";
 import { ImageGroup } from "./StyledComponents";
-import AnimatedNumbers from "react-animated-numbers";
 
 const Statistique = () => {
   return (
@@ -84,14 +83,7 @@ function SingleStat({ nbr, title }: { nbr: number; title: string }) {
   return (
     <div className=" md:w-[30%] bg-white shadow-lg flex justify-center flex-col items-center rounded-md px-6 py-6 group hover:bg-primary cursor-default">
       <h1 className=" text-4xl font-extrabold text-primary group-hover:text-white flex">
-        <AnimatedNumbers
-          transitions={(index) => ({
-            type: "keyframes",
-            duration: index + 1.6,
-          })}
-          animateToNumber={nbr}
-        />
-        +
+        {nbr}+
       </h1>
       <p className=" text-xl font-bold mt-5 group-hover:text-white">{title}</p>
     </div>

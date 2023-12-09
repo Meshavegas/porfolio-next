@@ -17,7 +17,8 @@ const HeroSection = () => {
           From intuitive design to robust code, I seamlessly blend aesthetics
           with functionality, sculpting innovative solutions with every line of
           code. Welcome to a world where versatility becomes a technological
-          masterpiece. Together, let's push the boundaries of what's possible.
+          masterpiece. Together, let&lsquo;s push the boundaries of what&lsquo;s
+          possible.
         </p>
         <button className=" mt-10 bg-secondary rounded-full px-6 py-3 text-white text-xl">
           Let&lsquo;s Talk!

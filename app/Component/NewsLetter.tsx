@@ -14,9 +14,15 @@ const NewsLetter = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const handleChange2 = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setDatas({
+      ...datas,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(datas);
+    // console.log(datas);
   };
   return (
     <div className="flex justify-between flex-wrap py-5">
@@ -70,7 +76,7 @@ const NewsLetter = () => {
           <textarea
             name="content"
             className="mt-10 w-full h-64 bg-primary2 focus:bg-light-200 focus:opacity-80 focus:outline-none p-3 rounded opacity-70 "
-            onChange={handleChange}
+            onChange={handleChange2}
           ></textarea>
 
           <br />

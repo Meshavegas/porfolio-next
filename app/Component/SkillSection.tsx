@@ -36,9 +36,9 @@ const SkillSection = ({ skills }: Props) => {
             <p className=" text-xl">
               Being a full-stack developer is like being the conductor of a
               digital symphony. I juggle between design and code, sculpting
-              online experiences. I'm the architect who turns lines of code into
-              functional works of art. In essence, I'm the one who breathes life
-              into digital magic.
+              online experiences. I&lsquo;m the architect who turns lines of
+              code into functional works of art. In essence, I&lsquo;m the one
+              who breathes life into digital magic.
             </p>
           </div>
         </div>

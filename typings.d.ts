@@ -9,11 +9,17 @@ type Base = {
 interface Post extends Base {
   author: Author;
   body: Block[];
-  categories: Category[];
+  category: Category[];
   mainImage: Image;
   slug: Slug;
   title: string;
   description: string;
+  comments: Comment[];
+}
+
+interface Comment {
+  commenterName: string;
+  message: string;
 }
 
 interface Author extends Base {

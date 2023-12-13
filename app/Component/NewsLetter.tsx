@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowForward } from "react-icons/io";
+import { sendMail } from "./_actions";
+import { compileWelcomeTemplate } from "@/lib/compile";
 
 const NewsLetter = () => {
   // const form = useForm()
-  const [datas, setDatas] = useState({ email: "", password: "" });
+  const [datas, setDatas] = useState<any>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDatas({
@@ -20,9 +22,14 @@ const NewsLetter = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log(datas);
+
+    const dat = {
+      ...datas,
+      body: compileWelcomeTemplate(datas?.userName, "meshavegas.com"),
+    };
+    const response = await sendMail(dat);
   };
   return (
     <div className="flex justify-between flex-wrap py-5">

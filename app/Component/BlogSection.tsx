@@ -5,6 +5,7 @@ import { FaCommentDots } from "react-icons/fa6";
 import urlFor from "@/lib/urlFor";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
+import ClientSideRoute from "./ClientSideRoute";
 const query = groq`
 *[_type =='post']{
   ...,
@@ -76,9 +77,9 @@ function BlogCard({ index, blog }: { index: number; blog: Post }) {
         </div>
         <h1 className=" text-xl mt-2"> {blog.title}</h1>
         <p className=" mt-2 mb-6 line-clamp-4">{blog.description}</p>
-        <a href="#" className=" underline text-xl text-primary">
-          Read more
-        </a>
+        <ClientSideRoute route={`blogs/${blog.slug.current}`}>
+          <span className=" underline text-xl text-primary">Read more</span>
+        </ClientSideRoute>
       </div>
     </div>
   );

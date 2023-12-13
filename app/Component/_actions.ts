@@ -10,17 +10,17 @@ export async function sendMail(req: any) {
   //   console.log(req);
 
   try {
-    const { data, error } = await resend.emails.send({
+    const rep: any = await resend.emails.send({
       from: "Mesha <contact@meshavegas.com>",
       to: email,
       subject: "Wellcome",
       html: body,
     });
-    if (error) {
-      Response.json({ error });
+    if (rep.error) {
+      Response.json({ rep });
     }
 
-    console.log(Response.json({ data }));
+    console.log(Response.json({ rep }));
   } catch (error) {
     console.log(error);
   }

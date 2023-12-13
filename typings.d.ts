@@ -44,6 +44,12 @@ interface Skill extends Base {
   tableauItems: ItemSkill[];
 }
 
+interface NewsLetter extends Base {
+  name: string;
+  email?: string;
+  message: string;
+}
+
 interface ItemSkill {
   itemTitle: string;
   image?: Image;

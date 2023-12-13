@@ -1,7 +1,7 @@
 "use server";
-import { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from "resend";
 import * as React from "react";
+import { client } from "@/sanity/lib/client";
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API);
 
@@ -19,9 +19,18 @@ export async function sendMail(req: any) {
     if (rep.error) {
       Response.json({ rep });
     }
-
     console.log(Response.json({ rep }));
+
+    await client.create({
+      _type: "newsletter",
+      email: email,
+      name: userName,
+      message: content,
+    });
+
+    return 200;
   } catch (error) {
     console.log(error);
+    return 120;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { toast } from "react-toastify";
 import Link from "next/link";
 import { IoMdArrowForward } from "react-icons/io";
 import { sendMail } from "./_actions";
@@ -30,6 +31,19 @@ const NewsLetter = () => {
       body: compileWelcomeTemplate(datas?.userName, "meshavegas.com"),
     };
     const response = await sendMail(dat);
+
+    if (response === 200) {
+      toast.success("Merci d'avoir souscrit", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
   };
   return (
     <div className="flex justify-between flex-wrap py-5">

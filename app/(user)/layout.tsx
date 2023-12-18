@@ -20,9 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta name="google-site-verification" content="mhcfEkbkeCkKB5K1G4fuzqsPl45HNt_aRR4LVsUz64w" />
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082872931704117"
-     crossorigin="anonymous"></script>
+      <meta
+        name="google-site-verification"
+        content="mhcfEkbkeCkKB5K1G4fuzqsPl45HNt_aRR4LVsUz64w"
+      />
+      <meta name="google-adsense-account" content="ca-pub-1082872931704117" />
       <body className={inter.className}>
         <Header />
         {children}

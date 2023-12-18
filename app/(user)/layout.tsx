@@ -5,6 +5,7 @@ import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,11 @@ export default function RootLayout({
         content="mhcfEkbkeCkKB5K1G4fuzqsPl45HNt_aRR4LVsUz64w"
       />
       <meta name="google-adsense-account" content="ca-pub-1082872931704117" />
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1082872931704117"
+        crossOrigin="anonymous"
+      />
       <body className={inter.className}>
         <Header />
         {children}

@@ -1,4 +1,5 @@
 import urlFor from "@/lib/urlFor";
+import AdCode from "@/lib/adCodeWithoutRouter";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import Image from "next/image";
@@ -52,8 +53,13 @@ async function Post({ params: { slug } }: Props) {
           </h3>
         </div>
       </div>
-      <div className=" w-[60%]">
-        <PortableText value={post.body} components={RichTextComponents} />
+      <div className=" flex flex-row">
+        <div className="w-[17%]">
+          <AdCode />
+        </div>
+        <div className=" w-[60%]">
+          <PortableText value={post.body} components={RichTextComponents} />
+        </div>
       </div>
     </div>
   );
